@@ -1,4 +1,4 @@
-## Photos
+## Auto Complete
 
 ***A bit weird but Google Auto Complete API has a max usage of 1 request per day for free users***
 
