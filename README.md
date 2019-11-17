@@ -17,11 +17,11 @@
 
 ## SCREENSHOTS
 
-![Welcome](https://bitbucket.org/RushBenazir/autocomplete/raw/e891a65dbdb280e47fcd37a3107d785ceadfd582/Screenshots/welcome-port.png)
-![Welcome](https://bitbucket.org/RushBenazir/autocomplete/raw/e891a65dbdb280e47fcd37a3107d785ceadfd582/Screenshots/welcome-land.png)
+![Welcome](https://github.com/RushanB/AutoComplete/blob/master/Screenshots/welcome-port.png)
+![Welcome - Lanscape](https://github.com/RushanB/AutoComplete/blob/master/Screenshots/welcome-land.png)
 
-![Search](https://bitbucket.org/RushBenazir/autocomplete/raw/e891a65dbdb280e47fcd37a3107d785ceadfd582/Screenshots/search-port.png)
-![Search](https://bitbucket.org/RushBenazir/autocomplete/raw/e891a65dbdb280e47fcd37a3107d785ceadfd582/Screenshots/search-land.png)
+![Search](https://github.com/RushanB/AutoComplete/blob/master/Screenshots/search-port.png)
+![Search - Landscape](https://github.com/RushanB/AutoComplete/blob/master/Screenshots/search-land.png)
 
-![Results](https://bitbucket.org/RushBenazir/autocomplete/raw/e891a65dbdb280e47fcd37a3107d785ceadfd582/Screenshots/results-port.png)
-![Results](https://bitbucket.org/RushBenazir/autocomplete/raw/e891a65dbdb280e47fcd37a3107d785ceadfd582/Screenshots/results-land.png)
+![Results](https://github.com/RushanB/AutoComplete/blob/master/Screenshots/results-port.png)
+![Results - Landscape](https://github.com/RushanB/AutoComplete/blob/master/Screenshots/results-land.png)
