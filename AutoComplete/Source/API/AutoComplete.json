@@ -1,0 +1,261 @@
+{
+    "predictions": [
+        {
+            "description": "1332 Hollis Street, Halifax, NS, Canada",
+            "id": "30edd6c2b737e6208c4705eab99e88a4e6f5e86e",
+            "matched_substrings": [
+                {
+                    "length": 4,
+                    "offset": 0
+                },
+                {
+                    "length": 2,
+                    "offset": 5
+                }
+            ],
+            "place_id": "ChIJEwG0qTUiWksRt_NzglOA5Xk",
+            "reference": "ChIJEwG0qTUiWksRt_NzglOA5Xk",
+            "structured_formatting": {
+                "main_text": "1332 Hollis Street",
+                "main_text_matched_substrings": [
+                    {
+                        "length": 4,
+                        "offset": 0
+                    },
+                    {
+                        "length": 2,
+                        "offset": 5
+                    }
+                ],
+                "secondary_text": "Halifax, NS, Canada"
+            },
+            "terms": [
+                {
+                    "offset": 0,
+                    "value": "1332"
+                },
+                {
+                    "offset": 5,
+                    "value": "Hollis Street"
+                },
+                {
+                    "offset": 20,
+                    "value": "Halifax"
+                },
+                {
+                    "offset": 29,
+                    "value": "NS"
+                },
+                {
+                    "offset": 33,
+                    "value": "Canada"
+                }
+            ],
+            "types": [
+                "street_address",
+                "geocode"
+            ]
+        },
+        {
+            "description": "1332 Howard Avenue, Windsor, ON, Canada",
+            "id": "9552632ed84421d72d50db16925ffc1e9693eab3",
+            "matched_substrings": [
+                {
+                    "length": 4,
+                    "offset": 0
+                },
+                {
+                    "length": 2,
+                    "offset": 5
+                }
+            ],
+            "place_id": "ChIJCYKcFvEsO4gR0lwT2_vpdrg",
+            "reference": "ChIJCYKcFvEsO4gR0lwT2_vpdrg",
+            "structured_formatting": {
+                "main_text": "1332 Howard Avenue",
+                "main_text_matched_substrings": [
+                    {
+                        "length": 4,
+                        "offset": 0
+                    },
+                    {
+                        "length": 2,
+                        "offset": 5
+                    }
+                ],
+                "secondary_text": "Windsor, ON, Canada"
+            },
+            "terms": [
+                {
+                    "offset": 0,
+                    "value": "1332"
+                },
+                {
+                    "offset": 5,
+                    "value": "Howard Avenue"
+                },
+                {
+                    "offset": 20,
+                    "value": "Windsor"
+                },
+                {
+                    "offset": 29,
+                    "value": "ON"
+                },
+                {
+                    "offset": 33,
+                    "value": "Canada"
+                }
+            ],
+            "types": [
+                "street_address",
+                "geocode"
+            ]
+        },
+        {
+            "description": "1332 Howard Street, San Francisco, CA, USA",
+            "id": "8cb7ab7b1b471a4b99a2c36a619a8c56d74654ed",
+            "matched_substrings": [
+                {
+                    "length": 7,
+                    "offset": 0
+                }
+            ],
+            "place_id": "EioxMzMyIEhvd2FyZCBTdHJlZXQsIFNhbiBGcmFuY2lzY28sIENBLCBVU0EiMRIvChQKEgnPo_BEnYCFgBFb2WEgMUb1UBC0CioUChIJjdizKoGAhYARu4iym1_h0pQ",
+            "reference": "EioxMzMyIEhvd2FyZCBTdHJlZXQsIFNhbiBGcmFuY2lzY28sIENBLCBVU0EiMRIvChQKEgnPo_BEnYCFgBFb2WEgMUb1UBC0CioUChIJjdizKoGAhYARu4iym1_h0pQ",
+            "structured_formatting": {
+                "main_text": "1332 Howard Street",
+                "main_text_matched_substrings": [
+                    {
+                        "length": 7,
+                        "offset": 0
+                    }
+                ],
+                "secondary_text": "San Francisco, CA, USA"
+            },
+            "terms": [
+                {
+                    "offset": 0,
+                    "value": "1332 Howard Street"
+                },
+                {
+                    "offset": 20,
+                    "value": "San Francisco"
+                },
+                {
+                    "offset": 35,
+                    "value": "CA"
+                },
+                {
+                    "offset": 39,
+                    "value": "USA"
+                }
+            ],
+            "types": [
+                "street_address",
+                "geocode"
+            ]
+        },
+        {
+            "description": "1332 Howe Avenue, Sacramento, CA, USA",
+            "id": "5d36b4f3299df00656260750211527fc1a7d9a51",
+            "matched_substrings": [
+                {
+                    "length": 7,
+                    "offset": 0
+                }
+            ],
+            "place_id": "EiUxMzMyIEhvd2UgQXZlbnVlLCBTYWNyYW1lbnRvLCBDQSwgVVNBIjESLwoUChIJkaV7lDjamoARWWIKDUeaoaYQtAoqFAoSCbum9D1G2pqAEfjV7KVqs65h",
+            "reference": "EiUxMzMyIEhvd2UgQXZlbnVlLCBTYWNyYW1lbnRvLCBDQSwgVVNBIjESLwoUChIJkaV7lDjamoARWWIKDUeaoaYQtAoqFAoSCbum9D1G2pqAEfjV7KVqs65h",
+            "structured_formatting": {
+                "main_text": "1332 Howe Avenue",
+                "main_text_matched_substrings": [
+                    {
+                        "length": 7,
+                        "offset": 0
+                    }
+                ],
+                "secondary_text": "Sacramento, CA, USA"
+            },
+            "terms": [
+                {
+                    "offset": 0,
+                    "value": "1332 Howe Avenue"
+                },
+                {
+                    "offset": 18,
+                    "value": "Sacramento"
+                },
+                {
+                    "offset": 30,
+                    "value": "CA"
+                },
+                {
+                    "offset": 34,
+                    "value": "USA"
+                }
+            ],
+            "types": [
+                "street_address",
+                "geocode"
+            ]
+        },
+        {
+            "description": "1332 Horseshoe Bend Road, Torquay VIC, Australia",
+            "id": "b2ce5a51e3ab2c514413ad77107e7a168a00cfbf",
+            "matched_substrings": [
+                {
+                    "length": 4,
+                    "offset": 0
+                },
+                {
+                    "length": 2,
+                    "offset": 5
+                }
+            ],
+            "place_id": "ChIJ7eiR0tBu1GoRCYc-q2An21s",
+            "reference": "ChIJ7eiR0tBu1GoRCYc-q2An21s",
+            "structured_formatting": {
+                "main_text": "1332 Horseshoe Bend Road",
+                "main_text_matched_substrings": [
+                    {
+                        "length": 4,
+                        "offset": 0
+                    },
+                    {
+                        "length": 2,
+                        "offset": 5
+                    }
+                ],
+                "secondary_text": "Torquay VIC, Australia"
+            },
+            "terms": [
+                {
+                    "offset": 0,
+                    "value": "1332"
+                },
+                {
+                    "offset": 5,
+                    "value": "Horseshoe Bend Road"
+                },
+                {
+                    "offset": 26,
+                    "value": "Torquay"
+                },
+                {
+                    "offset": 34,
+                    "value": "VIC"
+                },
+                {
+                    "offset": 39,
+                    "value": "Australia"
+                }
+            ],
+            "types": [
+                "street_address",
+                "geocode"
+            ]
+        }
+    ],
+    "status": "OK"
+}
