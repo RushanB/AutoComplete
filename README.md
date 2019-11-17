@@ -24,4 +24,4 @@
 ![Search](https://bitbucket.org/RushBenazir/autocomplete/raw/e891a65dbdb280e47fcd37a3107d785ceadfd582/Screenshots/search-land.png)
 
 ![Results](https://bitbucket.org/RushBenazir/autocomplete/raw/e891a65dbdb280e47fcd37a3107d785ceadfd582/Screenshots/results-port.png)
-![Results](https://bitbucket.org/RushBenazir/autocomplete/raw/e891a65dbdb280e47fcd37a3107d785ceadfd582/Screenshots/search-land.png)
+![Results](https://bitbucket.org/RushBenazir/autocomplete/raw/e891a65dbdb280e47fcd37a3107d785ceadfd582/Screenshots/results-land.png)
