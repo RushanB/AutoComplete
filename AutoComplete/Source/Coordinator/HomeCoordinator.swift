@@ -58,11 +58,11 @@ class HomeCoordinator: Coordinator {
             switch result {
             case .success(let response):
                 /// - uncomment for testing
-                 guard let output = AutoComplete.parse(jsonFile: "AutoComplete") else {
-                 return
-                 }
-                 self.searchedPredictions = output.predictions
-                //self.searchedPredictions = response.predictions
+                // guard let output = AutoComplete.parse(jsonFile: "AutoComplete") else {
+                // return
+                // }
+                // self.searchedPredictions = output.predictions
+                self.searchedPredictions = response.predictions
                 self.dispatchGroup.leave()
             case .failure(let error):
                 print("Error: \(error.localizedDescription)")
