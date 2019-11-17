@@ -57,7 +57,12 @@ class HomeCoordinator: Coordinator {
         autoCompleteAPI.request(from: .searchPlace(input: keyword)) { result in
             switch result {
             case .success(let response):
-                self.searchedPredictions = response.predictions
+                /// - uncomment for testing
+                 guard let output = AutoComplete.parse(jsonFile: "AutoComplete") else {
+                 return
+                 }
+                 self.searchedPredictions = output.predictions
+                //self.searchedPredictions = response.predictions
                 self.dispatchGroup.leave()
             case .failure(let error):
                 print("Error: \(error.localizedDescription)")
@@ -79,8 +84,34 @@ extension HomeCoordinator: HomeDelegate {
 extension HomeCoordinator: SearchDelegate {
     func didRequestSearch(with keyword: String) {
         getSearchResults(with: keyword)
-         dispatchGroup.notify(queue: .main) {
+        dispatchGroup.notify(queue: .main) {
             self.searchViewController.predictions = self.searchedPredictions
-         }
+        }
+    }
+    
+    func nextButtonTapped() {
+        if searchViewController.selectedPrediction == nil {
+            let alert = UIAlertController(title: "Oops", message: "You must have a valid address to continue", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default) { (_) in
+                alert.dismiss(animated: true, completion: nil)
+            }
+            alert.addAction(okAction)
+            searchViewController.present(alert, animated: true, completion: nil)
+        } else {
+            // Show success and pop
+            let alert = UIAlertController(title: "Success", message: "Your address has been validated!", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default) { (_) in
+                alert.dismiss(animated: true) {
+                    self.searchViewController.selectedPrediction = nil
+                    self.navigationController.popViewController(animated: true)
+                }
+            }
+            alert.addAction(okAction)
+            searchViewController.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func didSelectPrediction(_ prediction: Prediction) {
+        searchViewController.selectedPrediction = prediction
     }
 }

@@ -18,6 +18,9 @@ class PredictionCell: UICollectionViewCell, ViewModelBindable {
         self.viewModel = viewModel
         guard let vm = viewModel as? PredictionViewModel else { return }
         
+        let tapAction = UITapGestureRecognizer(target: vm, action: #selector(vm.didSelect(sender:)))
+        contentView.addGestureRecognizer(tapAction)
+        
         addressLabel.text = vm.addressText
         locationLabel.text = vm.locationText
     }

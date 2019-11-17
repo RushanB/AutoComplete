@@ -10,9 +10,15 @@ import UIKit
 
 class PredictionViewModel {
     private let prediction: Prediction
+    private var delegate: SearchDelegate?
     
-    init(prediction: Prediction) {
+    init(prediction: Prediction, delegate: SearchDelegate?) {
         self.prediction = prediction
+        self.delegate = delegate
+    }
+    
+    @objc func didSelect(sender: Any) {
+        delegate?.didSelectPrediction(prediction)
     }
     
     var addressText: String {

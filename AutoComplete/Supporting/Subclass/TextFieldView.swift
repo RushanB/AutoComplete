@@ -34,12 +34,20 @@ class TextFieldView: UIView {
         return textfield
     }()
     
-    var textDidChangeAction: ((String) -> Void)?
+    var textfieldText: String? {
+        didSet {
+            textfield.text = self.textfieldText
+        }
+    }
+    
+    weak var searchDelegate: SearchDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         translatesAutoresizingMaskIntoConstraints = false
+        
+        addToolBar(to: textfield)
         
         addSubview(label)
         addSubview(textfield)
@@ -61,8 +69,8 @@ class TextFieldView: UIView {
             
             textfield.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 25),
             textfield.centerXAnchor.constraint(equalTo: guide.centerXAnchor),
-            textfield.leftAnchor.constraint(equalTo: guide.leftAnchor, constant: 100),
-            textfield.rightAnchor.constraint(equalTo: guide.rightAnchor, constant: -100),
+            textfield.leftAnchor.constraint(equalTo: guide.leftAnchor, constant: 50),
+            textfield.rightAnchor.constraint(equalTo: guide.rightAnchor, constant: -50),
             textfield.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -25)
         ])
     }
@@ -75,6 +83,21 @@ class TextFieldView: UIView {
     override func sizeToFit() {
         bounds = CGRect(origin: .zero, size: intrinsicContentSize)
     }
+    
+    private func addToolBar(to textfield: UITextField)  {
+        let toolbar = UIToolbar()
+        toolbar.barStyle = .default
+        toolbar.tintColor = UIColor.brandColor
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let nextItem = UIBarButtonItem(title: "Next", style: .done, target: self, action: #selector(nextTapped))
+        toolbar.items = [flexSpace, nextItem]
+        toolbar.sizeToFit()
+        textfield.inputAccessoryView = toolbar
+    }
+    
+    @objc private func nextTapped () {
+        searchDelegate?.nextButtonTapped()
+    }
 }
 
 
@@ -85,7 +108,7 @@ extension TextFieldView: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let text = textField.text, text.count > 3 else { return true }
-        textDidChangeAction?(text)
+        searchDelegate?.didRequestSearch(with: text)
         return true
     }
 }

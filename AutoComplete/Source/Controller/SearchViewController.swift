@@ -10,6 +10,8 @@ import UIKit
 
 protocol SearchDelegate: class {
     func didRequestSearch(with keyword: String)
+    func didSelectPrediction(_ prediction: Prediction)
+    func nextButtonTapped()
 }
 
 class SearchViewController: ViewController {
@@ -23,6 +25,15 @@ class SearchViewController: ViewController {
         }
     }
     
+    var selectedPrediction: Prediction? {
+        didSet {
+            let address = self.selectedPrediction?.predictionDescription
+            self.textfieldView.textfieldText = address
+            self.predictions.removeAll()
+            reload()
+        }
+    }
+    
     private var textfieldView = TextFieldView()
     
     private var data: [CellBindable] = []
@@ -32,6 +43,12 @@ class SearchViewController: ViewController {
     weak var delegate: SearchDelegate?
     
     // MARK: - Lifecycle
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        textfieldView.textfieldText = nil
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,9 +69,7 @@ class SearchViewController: ViewController {
         view.backgroundColor = UIColor.brandBackgroundColor
         collectionView.backgroundColor = UIColor.brandBackgroundColor
         collectionView.dataSource = self
-        textfieldView.textDidChangeAction = { keyword in
-            self.delegate?.didRequestSearch(with: keyword)
-        }
+        textfieldView.searchDelegate = self.delegate
         
         view.addSubview(textfieldView)
         view.addSubview(collectionView)
@@ -77,7 +92,7 @@ class SearchViewController: ViewController {
         var data: [CellBindable] = []
         
         for prediction in predictions {
-            let predictionVM = PredictionViewModel(prediction: prediction)
+            let predictionVM = PredictionViewModel(prediction: prediction, delegate: delegate)
             data.append(predictionVM)
         }
         
